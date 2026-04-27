@@ -432,9 +432,21 @@
             50% { transform: translateY(-5px); }
         }
 
-        /* Responsive */
+       /* Responsive */
         @media (max-width: 768px) {
-            nav ul { gap: 1rem; font-size: 0.9rem; }
+            /* Mette il menu sotto il logo su mobile */
+            nav .container {
+                flex-direction: column;
+                gap: 15px; /* Spazio tra il logo e i link */
+            }
+            nav ul { 
+                justify-content: center; /* Centra i link */
+                gap: 10px 15px; 
+                font-size: 0.9rem; 
+            }
+            .hero {
+                padding-top: 140px; /* Compensa l'altezza extra del menu su mobile */
+            }
             .hero h1 { font-size: 2rem; }
             .section-title { font-size: 2rem; }
             .grid, .project-grid, .steps, .contact-grid { grid-template-columns: 1fr; }
